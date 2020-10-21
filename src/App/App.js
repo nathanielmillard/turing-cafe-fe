@@ -30,6 +30,30 @@ class App extends Component {
   }
 
   makeReservation = (reservation) => {
+    console.log(reservation)
+    fetch("http://localhost:3001/api/v1/reservations",{
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            "name": reservation.name,
+            "date": reservation.date,
+            "time": reservation.time,
+            "number": reservation.number
+          })
+        })
+        .then(response => {
+          if(!response.ok){
+            throw Error
+          } else {
+            console.log(response)
+          }
+        })
+        .catch(error => {
+          console.log(error)
+        })
+
     let allReservations = this.state.reservations
     allReservations.push(reservation)
     this.setState({reservations: allReservations})
