@@ -16,8 +16,17 @@ class Form extends Component {
   }
   render(){
     let reserve = (e)=> {
-      e.preventDefault()
-      this.props.makeReservation(this.state)
+      if(this.state.name && this.state.name && this.state.time && this.state.number){
+        this.props.makeReservation(this.state)
+        this.setState = {
+          name: '',
+          date: '',
+          time: '',
+          number: '',
+        }
+      } else {
+        alert('We still need more info')
+      }
     }
     return (
       <form>
