@@ -1,0 +1,22 @@
+form {
+  display: flex;
+  flex-direction: row;
+  margin: 1vw;
+  width: 100vw;
+}
+
+input{
+  margin: 1vw;
+  padding: 0;
+  height: 1rem;
+  width: 18vw;
+}
+
+.reserve{
+  margin: 1vw;
+  padding: 0;
+  height: 1.5rem;
+  width: 18vw;
+  background-color: teal;
+  color: white;
+}
