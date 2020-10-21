@@ -11,7 +11,6 @@ class Form extends Component {
       number: '',
     }
     this.updateState = (e) => {
-      console.log({[e.target.className]: e.target.value})
       this.setState({[e.target.className]: e.target.value})
     }
   }
