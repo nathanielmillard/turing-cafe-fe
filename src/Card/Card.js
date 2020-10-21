@@ -7,9 +7,9 @@ let Card = (props) => {
     <section className='reservation-card'>
       <h1> {props.name} </h1>
       <h2> {props.date} </h2>
-      <h2> {props.time} </h2>
+      <h2> {props.time + " pm"} </h2>
       <h2> {'Number of guests:' + props.number} </h2>
-      <button>Cancel</button>
+      <button className='cancel'>Cancel</button>
     </section>
   )
 }
@@ -20,5 +20,5 @@ Card.propTypes = {
   name:  PropTypes.string,
   date: PropTypes.string,
   time: PropTypes.string,
-  number: PropTypes.number,
+  number: PropTypes.string,
 }
